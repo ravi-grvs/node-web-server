@@ -22,7 +22,6 @@ app.use((req, res, next)=>{
             console.log('unable to log the file');
         };
     });
-    console.log(`${now} : ${req.method} : ${req.path}`)
     next();
 });
 
@@ -45,7 +44,12 @@ app.get('/about', function(req,res){
     });
 });
 
-
+app.get('/project', (req, res)=>{
+    res.render('project.hbs',{
+        pageTitle: "Project page",
+        welcomeMessage : "Protfoliopage"
+    })
+})
 
 app.get('/bad', function(req,res){
     res.send({
