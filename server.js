@@ -26,15 +26,13 @@ app.use((req, res, next)=>{
     next();
 });
 
-// app.use((req, res,next)=>{
-//         res.render('maintenance.hbs');
-//     });
+
     
 app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res){
     res.render('home.hbs',{
-        pageTitle : 'Home page',
-        welcomeMessage : "welcome to my website"
+        pageTitle : 'My Nodeserver web app ',
+        welcomeMessage : "welcome to noe web app"
         
     });
 });
